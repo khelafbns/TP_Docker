@@ -22,6 +22,6 @@ Q8. docker run crée un nouveau conteneur à partir d'une image et exécute une 
 
 Q9. Non, la modification n'est pas conservée. Elle avait été écrite dans la couche inscriptible de l'ancien conteneur. En faisant docker rm, cette couche est supprimée. Le nouveau conteneur repart de l'image nginx, qui n'a pas changé. Les volumes (exercice 2) permettent de conserver ce type de modification.
 
-Q10. Sans -it, le conteneur n'a pas d'entrée standard ouverte ni de terminal. Le programme attend une réponse au clavier (input()), ne reçoit rien (fin de fichier), et se termine, souvent avec une erreur. Dans docker ps -a, il apparaît avec le statut Exited. Vérifie ce que tu vois chez toi (message d'erreur, code de sortie), car je n'ai pas vu hello.py et je ne peux pas te le confirmer précisément.
+Q10. Sans -it, le conteneur n'a pas d'entrée standard ouverte ni de terminal. Le programme attend une réponse au clavier (input()), ne reçoit rien (fin de fichier), et se termine, souvent avec une erreur. Dans docker ps -a, il apparaît avec le statut Exited. 
 
 Q11. Une image est un modèle en lecture seule (le programme et ses dépendances empaquetés). Un conteneur est une instance en cours d'exécution (ou arrêtée) créée à partir d'une image, avec en plus une couche inscriptible. On peut créer plusieurs conteneurs à partir d'une même image, comme plusieurs objets à partir d'une même classe.
